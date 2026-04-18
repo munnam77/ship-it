@@ -10,7 +10,36 @@ One command. Reviews your diff, writes the commit message, updates the changelog
 
 That's it. No flags. No config. It reads your code and your git history, figures out what you did, and hands you a polished release.
 
-![demo](./docs/demo.gif)
+```
+$ /ship-it
+
+Review:
+  ✓ Null-safety fix in validateToken()
+  ⚠ Consider: jwt.verify throws on invalid tokens — wrap in try/catch
+
+Commit message:
+  fix(auth): guard against null token in validateToken
+
+  Calling .length on null token was crashing the auth middleware when
+  requests arrived without an Authorization header. Now returns null
+  as designed.
+
+Semver: patch (bug fix, no behavior change for valid inputs)
+
+CHANGELOG entry:
+  ### Fixed
+  - Auth middleware no longer crashes when Authorization header is missing
+
+Release notes:
+  ## What's new
+  Fixes a crash in the auth middleware when requests arrive without an
+  Authorization header.
+
+  ## Changes
+  - Fixed: null token handling in validateToken()
+
+Ship it? [y/N]
+```
 
 ---
 
