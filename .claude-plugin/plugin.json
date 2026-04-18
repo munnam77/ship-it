@@ -1,0 +1,10 @@
+{
+  "name": "ship-it",
+  "version": "0.1.0",
+  "description": "The Claude Code skill that turns a messy branch into a clean release.",
+  "author": "munnam77",
+  "license": "MIT",
+  "repository": "https://github.com/munnam77/ship-it",
+  "keywords": ["claude-code", "skill", "release", "changelog", "commit", "semver"],
+  "skills": ["skills/ship-it"]
+}
